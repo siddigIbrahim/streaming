@@ -113,7 +113,7 @@ export default {
       .then((data) => {
         movieArray = data.items.slice(0, 15);
         movieArray.forEach((element) => {
-          fetch(`http://www.omdbapi.com/?i=${element.id}&apikey=a322a48c`)
+          fetch(`https://www.omdbapi.com/?i=${element.id}&apikey=a322a48c`)
             .then((response) => response.json())
             .then((data) => {
               this.mostPopularMovies.push(data);
@@ -126,7 +126,7 @@ export default {
       .then((data) => {
         tvArray = data.items.slice(0, 15);
         tvArray.forEach((element) => {
-          fetch(`http://www.omdbapi.com/?i=${element.id}&apikey=a322a48c`)
+          fetch(`https://www.omdbapi.com/?i=${element.id}&apikey=a322a48c`)
             .then((response) => response.json())
             .then((data) => {
               this.mostPopularSeries.push(data);

@@ -83,7 +83,7 @@ export default {
     appPreloader,
   },
   beforeMount() {
-    fetch(`http://www.omdbapi.com/?i=${this.$route.params.id}&apikey=a322a48c`)
+    fetch(`https://www.omdbapi.com/?i=${this.$route.params.id}&apikey=a322a48c`)
       .then((response) => response.json())
       .then((data) => {
         this.feature = data;

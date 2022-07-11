@@ -82,7 +82,7 @@ export default {
   methods: {
     searchBase() {
       if (this.search != "") {
-        fetch(`http://www.omdbapi.com/?apikey=a322a48c&s=${this.search}`)
+        fetch(`https://www.omdbapi.com/?apikey=a322a48c&s=${this.search}`)
           .then((response) => response.json())
           .then((data) => {
             this.results = data.Search;
