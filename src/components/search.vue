@@ -30,7 +30,7 @@
         v-for="result in results"
         class="d-flex justify-center"
         :key="result.imdbID"
-        xs="4"
+        cols="6"
         sm="4"
         md="3"
         lg="2"
@@ -43,12 +43,10 @@
           >
             <v-img
               :src="result.Poster"
-              height="250"
-              width="200"
-              class="white--text align-end"
+              class="white--text align-end feature-slide"
               gradient="to top, rgba(0,0,0,.9), rgba(0,0,0,.1)"
             >
-              <v-card-subtitle class="text-capitalized caption">
+              <v-card-subtitle class="text-capitalized feature-text">
                 {{ result.Title }}
                 <span>({{ result.Year }})</span>
               </v-card-subtitle>
@@ -92,4 +90,24 @@ export default {
   },
 };
 </script>
+<style scoped>
+.feature-slide{
+   height: 250px;
+    width: 200px;
 
+}
+.feature-text{
+    font-size: 0.8rem;
+  }
+@media only screen and ( max-width: 960px) {
+  .feature-slide{
+    height: 200px;
+    width: 150px;
+    
+  }
+  .feature-text{
+    font-size: 0.5rem;
+  }
+  
+}
+</style>

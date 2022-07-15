@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="grey darken-4">
     <div
-      class="headline text-capitalize mt-15 mb-10 titles d-flex justify-center"
+      class="text-subtitle-1 text-capitalize mt-15 mb-10 titles text-md-h5 d-flex justify-center"
     >
       most popular movies
     </div>
@@ -26,12 +26,11 @@
           >
             <v-img
               :src="movie.Poster"
-              height="200"
-              width="150"
-              class="white--text align-end"
+           
+              class="white--text align-end feature-slide"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             >
-              <v-card-subtitle class="text-capitalized caption">
+              <v-card-subtitle class="text-capitalized feature-text">
                 {{ movie.Title }}
                 <span>({{ movie.Year }})</span>
               </v-card-subtitle>
@@ -47,7 +46,7 @@
     </v-slide-group>
 
     <div
-      class="headline text-capitalize mt-15 mb-10 d-flex justify-center titles"
+      class="text-md-h5 text-subtitle-1 text-capitalize mt-15 mb-10 d-flex justify-center titles"
     >
       most popular series
     </div>
@@ -73,12 +72,10 @@
           >
             <v-img
               :src="series.Poster"
-              height="200"
-              width="150"
-              class="white--text align-end"
+              class="white--text align-end feature-slide"
               gradient="to top, rgba(0,0,0,.9), rgba(0,0,0,.1)"
             >
-              <v-card-subtitle class="text-capitalized caption">
+              <v-card-subtitle class="text-capitalized feature-text">
                 {{ series.Title }}
                 <span>({{ series.Year }})</span>
               </v-card-subtitle>
@@ -147,5 +144,24 @@ export default {
   border-radius: 50%;
   margin: 0 2rem;
   background-color: #6AAAFF!important;
+}
+.feature-slide{
+   height: 200px;
+    width: 150px;
+
+}
+.feature-text{
+    font-size: 0.8rem;
+  }
+@media only screen and ( max-width: 960px) {
+  .feature-slide{
+    height: 150px;
+    width: 100px;
+    
+  }
+  .feature-text{
+    font-size: 0.5rem;
+  }
+  
 }
 </style>
