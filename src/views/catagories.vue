@@ -26,12 +26,10 @@
           >
             <v-img
               :src="result.image"
-              height="250"
-              width="200"
-              class="white--text align-end"
+              class="white--text align-end feature-slide"
               gradient="to top, rgba(0,0,0,.7), rgba(0,0,0,.1)"
             >
-              <v-card-subtitle class="text-capitalized caption">
+              <v-card-subtitle class="text-capitalized feature-text">
                 {{ result.title }}
                 <span>({{ result.year }})</span>
               </v-card-subtitle>
@@ -117,5 +115,24 @@ export default {
   border-radius: 50%;
   margin: 3rem 2rem;
   background-color: #6AAAFF !important;
+}
+.feature-slide{
+   height: 250px;
+    width: 200px;
+
+}
+.feature-text{
+    font-size: 0.8rem;
+  }
+@media only screen and ( max-width: 960px) {
+  .feature-slide{
+    height: 200px;
+    width: 150px;
+    
+  }
+  .feature-text{
+    font-size: 0.5rem;
+  }
+  
 }
 </style>

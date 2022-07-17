@@ -118,7 +118,7 @@ export default {
         });
       });
 
-    fetch(`https://imdb-api.com/en/API/MostPopularTVs/k_yg2ow3m3`)
+    fetch(`https://imdb-api.com/en/API/Top250TVs/k_yg2ow3m3`)
       .then((response) => response.json())
       .then((data) => {
         tvArray = data.items.slice(0, 15);
